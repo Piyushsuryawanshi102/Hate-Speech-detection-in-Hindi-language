@@ -1,0 +1,26 @@
+backend 
+
+cd "C:\Users\ASUS\Desktop\Hate speech detection\backend"
+
+pip install flask flask-cors scikit-learn pandas nltk deep-translator joblib
+
+python train_model.py
+
+python server.py
+
+
+#update  
+
+python train_model.py
+
+python server.py
+
+
+
+frontend
+
+
+cd "C:\Users\ASUS\Desktop\Hate speech detection"
+
+npx expo start
+
