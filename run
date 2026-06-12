@@ -1,4 +1,4 @@
-backend 
+#BACKEND 
 
 cd "C:\Users\ASUS\Desktop\Hate speech detection\backend"
 
@@ -17,10 +17,33 @@ python server.py
 
 
 
-frontend
+#FRONTEND
 
 
-cd "C:\Users\ASUS\Desktop\Hate speech detection"
+    cd "C:\Users\ASUS\Desktop\Hate speech detection"
 
-npx expo start
+    npx expo start
+
+#EXAMPLE
+
+ #HATE 
+  
+
+ तुम्हारे जैसे लोग समाज के लिए बेकार हैं।
+ मुझे तुम लोगों से घृणा है।
+ तुम लोगों पर कभी विश्वास नहीं करना चाहिए।
+ यह समूह बहुत खराब है।
+ तुम लोग देश को नुकसान पहुँचा रहे हो।
+
+ #POSITIVE 
+
+ हम सबको मिलजुल कर रहना चाहिए।
+ शिक्षा जीवन में बहुत महत्वपूर्ण है।
+ कल हम विद्यालय जाएँगे।
+ मुझे क्रिकेट खेलना अच्छा लगता है।
+ यह परियोजना बहुत रोचक है।
+ सभी लोगों का सम्मान करना चाहिए।
+` मैं मशीन लर्निंग सीख रहा हूँ।`
+ परिश्रम सफलता की कुंजी है।
+
 

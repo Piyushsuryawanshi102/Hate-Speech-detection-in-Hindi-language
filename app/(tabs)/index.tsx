@@ -15,14 +15,7 @@ import { ScoreGauge, getScoreLabelColor } from '@/components/ScoreGauge';
 import { CategoryBar } from '@/components/CategoryBar';
 import { analyzeText, addToHistory, checkBackendHealth, AnalysisResult } from '@/services/api';
 
-const quickSamples = [
-  'आप बहुत अच्छे इंसान हैं।',
-  'सभी लोग समान हैं',
-  'तुम बहुत बेवकूफ हो',
-  'कुत्ते की तरह भौंकना बंद कर',
-  'You are a wonderful person',
-  'This is terrible content',
-];
+
 
 export default function DetectScreen() {
   const { width } = useWindowDimensions();
@@ -177,21 +170,7 @@ export default function DetectScreen() {
             </Text>
           </View>
 
-          {/* Quick Samples */}
-          <View style={[styles.samplesSection, { width: cardWidth }]}>
-            <Text style={[styles.samplesLabel, { color: C.textTertiary }]}>Quick samples →</Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.samplesScroll}>
-              {quickSamples.map((s, i) => (
-                <TouchableOpacity
-                  key={i}
-                  onPress={() => setText(s)}
-                  style={[styles.sampleChip, { backgroundColor: C.primary + '15', borderColor: C.primary + '30' }]}
-                >
-                  <Text style={[styles.sampleText, { color: C.primaryLight }]} numberOfLines={1}>{s}</Text>
-                </TouchableOpacity>
-              ))}
-            </ScrollView>
-          </View>
+
 
           {/* Analyze Button */}
           <Animated.View style={[{ width: cardWidth, transform: [{ scale: pulseAnim }] }]}>
@@ -412,12 +391,7 @@ const styles = StyleSheet.create({
   textInput: { borderRadius: BorderRadius.md, padding: Spacing.lg, fontSize: FontSizes.md, minHeight: 120, maxHeight: 200, borderWidth: 1, lineHeight: 22 },
   charCount: { fontSize: FontSizes.xs, textAlign: 'right', marginTop: Spacing.sm, fontWeight: FontWeights.medium },
 
-  // Quick samples
-  samplesSection: { marginBottom: Spacing.xl },
-  samplesLabel: { fontSize: FontSizes.sm, fontWeight: FontWeights.medium, marginBottom: Spacing.sm },
-  samplesScroll: { flexDirection: 'row' },
-  sampleChip: { paddingVertical: Spacing.sm, paddingHorizontal: Spacing.md, borderRadius: BorderRadius.full, borderWidth: 1, marginRight: Spacing.sm },
-  sampleText: { fontSize: FontSizes.sm, fontWeight: FontWeights.medium },
+
 
   // Analyze button
   analyzeBtn: {
